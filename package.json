@@ -1,0 +1,26 @@
+{
+  "name": "ecomm",
+  "version": "1.0.0",
+  "description": "mern app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server/server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node server/seeder.js",
+    "data:destroy": "node server/seeder.js -d"
+  },
+  "author": "Tejas Parkar",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "concurrently": "^6.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "mongoose": "^5.12.14",
+    "nodemon": "^2.0.7"
+  }
+}
